@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <button onclick="deleteFunction()">Delete</button>
+    <button onclick="enterValue()">Value</button> -->
+
+    <script>
+
+        // window.alert("Hello");
+
+        // window.confirm("Are you sure to delete this file?")
+
+        // function deleteFunction(){
+        //     if (confirm("Are you sure to delete this file?")) {
+        //         window.close();
+        //         console.log("done");
+        //     }
+        //     else {
+        //         console.log("Ok");
+        //     }
+        // }
+
+        // function enterValue(){
+        //     const value = prompt("Enter a value : ");
+        //     console.log(value);
+        // }
+
+        // setTimeout(() => {
+        //     alert("Hey!!");
+        // }, 10000);
+
+        // setInterval(() => {
+        //     console.log(new Date().getSeconds());
+        // }, 1000);
+
+        // setTimeout(sayHello, 5000);
+        // function sayHello(){
+        //     console.log("hello");
+        //     sayHello();
+        // };
+
+        // function calc(n, m, callBackFunction) {
+        //     let sum = n + m;
+        //     let min = n - m;
+        //     let mul = n * m;
+        //     let div = n / m;
+
+        //     callBackFunction(sum, min, mul, div);
+        // }
+
+        // function sampleFunction(sum, min, mul){
+        //     console.log(sum);
+        //     console.log(min,mul);
+        // }
+
+        // calc(20, 5, sampleFunction);
+
+
+        // const sampleFunction = (sum, min, mul) => console.log(sum);
+
+        // calc(20, 5, sampleFunction);
+
+
+
+        // const scores = [10,20,18,9];
+        // scores.forEach(value => console.log(value));
+
+        // const students = ["Ali", "Reza", "Mohammad", "Amirali"];
+        // students.forEach(value => console.log(value));
+
+        // const scores = [10, 20, 18, 9]; 
+        // const newScore = scores.map(value => value*5);
+        // console.log(newScore);
+
+        // const scoresTop10 = scores.filter(value => value>=10); 
+        // console.log(scoresTop10);
+        
+        // const sum = scores.reduce((sum, value) => sum += value);
+        // console.log(sum / scores.length);
+
+        const boys = ["Reza", "Ali", "Amirali"];
+        const girls = ["Kimia", "Negar", "Niloufar"];
+        const students = [...boys, "test", ...girls];
+        console.log(students);
+
+        const company = {
+            brand: "Benz"
+        };
+        const car = {
+            ...company,
+            model: "S500",
+            color: "Black"
+        };
+        console.log(car);
+
+        const [reza, ,amirali] = students;
+        console.log(reza, amirali);
+
+        const {brand, color} = car;
+        console.log(brand, color);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Human {
+            constructor(firstName, lastName, birthYear) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.birthYear = birthYear;
+            }
+            fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+            age() {
+                return new Date().getFullYear() - this.birthYear;
+            }
+        }
+
+        const reza = new Human("Reza", "Haghighi", 2001);
+        const behnam = new Human("Behnam", "Ghoreshi", 2000);
+        // console.log(reza);
+        // console.log(reza.age());
+        
+        const students = [];
+
+        students.push(reza, behnam);
+        console.log(students);
+
+        class Employee extends Human{
+            constructor(firstName, lastName, birthYear, code, grade){
+                super(firstName, lastName, birthYear);
+                this.code = code;
+                this.grade = grade;
+            }
+            fullName(){
+                return `${super.fullName()} ${this.code}`;
+            }
+        }
+
+        const ahar = new Employee("Somayeh", "Ahar", 1984, 123, 18);
+        console.log(ahar.fullName());
+        console.log(ahar);
+
+
+
+
+    </script>
+</body>
+
+</html>

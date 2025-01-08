@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="loadProducts()">load products</button>
+
+    <script>
+
+        const endPoint = "http://127.0.0.1:5500/Practice/js&html/products.json";
+
+        function loadProducts(){
+
+            const request = new XMLHttpRequest();
+
+            request.onload = ()=> {
+                console.log(request.responseText);
+                const products = JSON.parse(request.responseText);
+
+                products.forEach((p) => {
+                   const div = document.createElement("div"); 
+                //    div.innerHTML = "card";
+                });
+            }
+
+            request.open("GET", endPoint);
+
+            request.send();
+            
+        }
+
+
+    </script>
+</body>
+</html>

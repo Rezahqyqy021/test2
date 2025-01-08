@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let i = 10;
+        let b = i;
+
+        console.log(i, b);
+
+        i = 20;
+
+        console.log('i :>> ', i);
+        console.log('b :>> ', b);
+
+        const car = {
+            model: "Benz"
+        };
+
+        const newCar = car;
+
+        console.log('car :>> ', car);
+        console.log('newCar :>> ', newCar);
+
+        car.model = "BMW";
+
+        console.log('car :>> ', car);
+        console.log('newCar :>> ', newCar);
+
+
+
+
+        const student = {
+            name: "Ali",
+            age: 20
+        }
+
+        const students = [];
+
+        students.push(student);
+
+        console.log('students :>> ', students);
+
+        student.name = "Reza";
+        student.age = "24";
+
+        students.push(student);
+
+        console.log('students :>> ', students);
+    </script>
+</body>
+
+</html>

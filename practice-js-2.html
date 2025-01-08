@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // const students = ["Shaghayegh", "Niloofar", "Negar", "Kimia", "Rozhin"];
+
+        // console.log(students[1]);
+
+        // console.log(students[0], students[2]);
+
+        // students[1] = "Niloufar";
+
+        // console.log(students);
+
+        // console.log(students.length);
+
+        // students.push("Somaye");
+        // students.unshift("Yalda");
+
+        // students.pop();
+        // students.shift();
+        
+        // console.log(students);
+
+        const date = new Date();
+        console.log(date);
+        console.log("get seconds : " , date.getSeconds());
+        console.log("get Minutes : ", date.getMinutes());
+        console.log("get Hours : ", date.getHours());
+        console.log("get FullYear : ", date.getFullYear());
+
+        console.log("get Day of Week : ", date.getDay());
+        console.log("get Date of Month : ", date.getDate());
+        console.log("get Month of Year : ", date.getMonth());
+        
+        console.log(date.toLocaleString("fa-IR"));
+        
+
+        // const hour = 1;  //date.getHours();
+
+        // debugger;
+
+        // if (hour>=6 && hour<12) {
+        //     console.log("Good Morning");
+        // }else if (hour >= 12 && hour < 17) {
+        //         console.log("Good Afternoon");
+        // }else if (hour >= 17 && hour < 19) {
+        //         console.log("Good Evening");
+        // }else if (hour >= 19 && hour < 24) {
+        //         console.log("Good Night");
+        // }
+        // else{
+        //     console.log("Go to your fucking Bed and Sleeeeep!!!");
+        // };
+
+
+        // const day = date.getDay();
+
+        // debugger;
+        // switch (day) {
+        //     case 0:
+        //         console.log("یکشنبه");
+        //         break;
+            
+        //     case 1:    
+        //         console.log("دوشنبه");
+
+        //     case 2:
+        //         console.log("سه‌شنبه");
+        //         break;
+            
+        //     case 3:
+        //         console.log("چهارشنبه");
+        //         break;
+                
+        //     case 4:
+        //         console.log("پنج‌شنبه");
+        //         break;
+            
+        //     default:
+        //         console.log("جمعه");
+        //         break;
+        // }
+
+
+        const month = date.getMonth();
+
+        // switch (month) {
+        //     case 0:
+        //         console.log("January");
+        //         break;
+        
+        //     case 1:
+        //         console.log("February");
+        //         break;
+
+        //     case 2:
+        //         console.log("March");
+        //         break;
+            
+        //     case 3:
+        //         console.log("April");
+        //         break;
+
+        //     case 4:
+        //         console.log("May");
+        //         break;
+
+        //     case 5:
+        //         console.log("June");
+        //         break;
+
+        //     case 6:
+        //         console.log("July");
+        //         break;
+
+        //     case 7:
+        //         console.log("August");
+        //         break;
+
+        //     case 8:
+        //         console.log("September");
+        //         break;
+
+        //     case 9:
+        //         console.log("October");
+        //         break;
+
+        //     case 10:
+        //         console.log("November");
+        //         break;
+
+        //     default:
+        //         console.log("December");
+        //         break;
+        // }
+
+        switch (month) {
+            case 0:
+            case 1:
+            case 2:
+                console.log("زمستان");
+                break;
+
+            case 3:
+            case 4:
+            case 5:
+                console.log("بهار");
+                break;
+        
+            case 6:
+            case 7:
+            case 8:
+                console.log("تابستان");
+                break;
+
+            default:
+                console.log("پاییز");
+                break;
+        }
+
+
+        const scores = [10, 12, 14, 15];
+
+        debugger;
+        for(let i=0;i < scores.length;i++){
+            console.log(scores[i]);
+        }
+
+    </script>
+</body>
+</html>

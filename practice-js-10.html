@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reza/lib/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <button class="btn btn-danger" onclick="goToCart()">Cart</button>
+
+    <script>
+
+        function goToCart() {
+            location = "/Practice/cart-js.html";
+        }
+
+        const cart = [];
+        const PRODUCTS_LIST = [{
+            id: 1,
+            brand: "Iphone",
+            model: "16 Pro",
+            color: "white",
+            price: "1,500 $",
+            image: "/Practice/lib/img/1.jpg"
+        },
+        {
+            id: 2,
+            brand: "Samsung",
+            model: "S24 Ultra",
+            color: "Black",
+            price: "1,000 $",
+            image: "/Practice/lib/img/02.jpg"
+        },
+        {
+            id: 3,
+            brand: "Nokia",
+            model: "1100",
+            color: "Tomato",
+            price: "700 $",
+            image: "/Practice/lib/img/03.jpg"
+        }
+        ];
+
+        const root = document.querySelector("#root");
+        root.classList.add("container-fluid");
+
+        // const cartButton = document.createElement("button");
+        // cartButton.classList.add("btn", "btn-danger");
+        // cartButton.innerHTML = "Cart";
+        // cartButton.onclick = () => {
+
+        // };
+        // root.appendChild(cartButton);
+
+
+        const row = document.createElement("div");
+        row.classList.add("row");
+        root.appendChild(row);
+
+        for (let i = 0; i < PRODUCTS_LIST.length; i++) {
+            const col = document.createElement("div");
+            col.classList.add("col-md-4", "border", "text-center", "mt-4");
+            row.appendChild(col);
+            col.innerHTML = PRODUCTS_LIST[i].brand;
+
+            const img = document.createElement("img");
+            img.classList.add("img-fluid");
+            img.src = PRODUCTS_LIST[i].image;
+            col.appendChild(img);
+
+            const button = document.createElement("button");
+            button.classList.add("btn", "btn-danger");
+            button.innerHTML = PRODUCTS_LIST[i].price;
+            button.onclick = () => {
+                cart.push(PRODUCTS_LIST[i].id);
+                console.log(cart);
+                // col.remove();
+            };
+            col.appendChild(button);
+        };
+
+        // const col2 = document.createElement("div");
+        // col2.classList.add("col-md-4", "border", "text-center");
+        // row.appendChild(col2);
+        // col2.innerHTML = "Column 02";
+
+        // const col3 = document.createElement("div");
+        // col3.classList.add("col-md-4", "border", "text-center");
+        // row.appendChild(col3);
+        // col3.innerHTML = "Column 03";
+
+
+    </script>
+</body>
+
+</html>

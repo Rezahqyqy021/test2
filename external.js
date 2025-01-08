@@ -1,0 +1,1 @@
+document.getElementById("firstHead").innerHTML = "Hello motherfucker"

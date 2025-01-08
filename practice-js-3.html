@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/reza/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/reza/lib/css/bootstrap.rtl.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 input-group">
+                <input type="text" id="studentName" class="form-control">
+                <button onclick="addStudent()" class="btn btn-success">Add Student</button>
+            </div>
+            <div class="col-12 mt-5 input-group">
+                <input type="text" id="markOne" class="form-control">
+                <button onclick="addMark()" class="btn btn-info">Add Mark</button>
+                <button onclick="showAverage()" class="btn btn-warning">Show Average</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const students = [];
+
+        function addStudent(){
+            const stu = document.getElementById("studentName").value;
+
+            students.push(stu);
+
+            console.log(students);
+        };
+
+
+        const marks = [];
+
+        function addMark(){
+            const ma = Number(document.getElementById("markOne").value);
+
+            if (ma>=0 && ma<=20) {
+                marks.push(ma);                
+                console.log(marks);
+            }
+            else{
+                alert("Enter a Number between 0 to 20!")
+            }
+        }
+
+        function showAverage(){
+            let sum = 0;
+
+            for(let i=0; i<marks.length; i++){
+                sum += marks.length;
+            }
+            const average = sum / marks.length;
+            console.log(average.toFixed(2));
+        }
+
+        
+    </script>
+
+</body>
+</html>
